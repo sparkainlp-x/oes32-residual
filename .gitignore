@@ -1,0 +1,20 @@
+# Python bytecode and test caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+.env
+
+# Validation artifacts
+baseline_run.txt
+baseline_timing.txt
+reference_run.txt
+validation_results.txt
+
+# Platform files
+.DS_Store
