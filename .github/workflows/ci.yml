@@ -1,4 +1,4 @@
-name: Validate reference implementation
+name: Validate residual reference
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   test:
-    name: Unit tests (Python ${{ matrix.python-version }})
+    name: Contract tests (Python ${{ matrix.python-version }})
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -27,4 +27,4 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
       - name: Run contract tests
-        run: python -m unittest discover -s tests -v
+        run: python -m pytest -q

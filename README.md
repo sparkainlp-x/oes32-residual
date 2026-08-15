@@ -1,87 +1,64 @@
-# OES-32 Residual Reference Implementation
+# OES-32 Residual Reference
 
-> **Status:** Public computational reference implementation, version 1.
+This repository is a small, deterministic **computational residual reference** for independently examining the numerical difference between two 32-component real-valued vectors. It includes an open definition, a minimal reference implementation, executable contract tests, and an explicit failure criterion.
 
-This repository packages the supplied **OES-32 Residual Claim — Public Minimal Implementation v1** as a runnable and reviewable Python project. Its published operational definition is:
+It is **not** an empirical study, a scientific theory, a physical model, a biological model, a diagnostic, or a claim about consciousness. The `OES-32` name is an identifier for this implementation only.
 
-\[
-S(R) = \max\left(0, 0.55D + 0.30(1-L)\right)
-\]
+## Contract
 
-where `D` is the implementation's dissociation metric and `L` is the binary loop-entry indicator. The repository preserves the supplied script verbatim in `originals/` and exposes an importable, deterministic version at the repository root for testing and independent review.
+The calculation is defined in [residual_definition.md](residual_definition.md). The pass/fail decision is defined separately in [failure_criterion.md](failure_criterion.md). Together, those files are the public contract for the code and tests.
 
-## Scope and interpretation
-
-The code is a **computational implementation of a user-supplied model specification**. It provides no empirical validation, scientific conclusion, or claim of physical interpretation on its own. Independent reviewers should assess the model assumptions, parameter choices, numerical transformations, and evidence separately from the reproducibility of this software artifact.
-
-| Item | Value |
+| Item | Contract |
 |---|---|
-| Implementation dimension | `N = 32` |
-| Default Monte Carlo runs | `300` |
-| Default pseudorandom seed | `42` |
-| Runtime dependency | NumPy |
-| Test framework | Python standard-library `unittest` |
+| Input | Two finite real-valued vectors of length 32 and a finite, non-negative tolerance. |
+| Component residual | `abs(observed[i] - reference[i])` for each index `i`. |
+| Aggregate residual | The maximum of the 32 component residuals. |
+| Failure rule | Failure occurs if and only if aggregate residual `> tolerance`. |
+| Invalid input | Rejected with `ValueError`; no residual status is produced. |
 
-## Quick start
+## Run the reference code
 
-Create an isolated environment if desired, install the single dependency, and execute the reference run.
+The reference implementation uses only the Python standard library. Create an environment, install the test dependency, and evaluate a simple input from the repository root.
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 python3 -m pip install -r requirements.txt
-python3 oes32_residual_public_v1.py
+PYTHONPATH=src python3 -c "from residual_reference import evaluate_residual; result = evaluate_residual([0.0] * 32, [0.0] * 32, 0.0); print(result)"
 ```
 
-The program prints Monte Carlo progress and summary statistics. The refactored entry point explicitly uses `numpy.random.RandomState(42)` so that its default sweep retains the supplied script's original legacy NumPy random-number sequence.
+The command prints a `ResidualResult` with an aggregate residual of `0.0`, `passed=True`, and `failed=False`.
 
-## Verification
+## Run the contract tests
 
-Run the test suite from the repository root:
+Run the complete contract suite from the repository root:
 
 ```bash
-python3 -m unittest discover -s tests -v
+python3 -m pytest -q
 ```
 
-The tests check density-matrix normalization properties, the algebra of the published residual expression, deterministic seeded Monte Carlo results, and bounded summary statistics. Continuous integration repeats the same command on supported Python versions.
+The tests verify the component formula, maximum aggregation, strict failure inequality, boundary behavior at equality, deterministic repeatability, and invalid-input rejection.
 
 ## Repository layout
 
 ```text
 .
-├── oes32_residual_public_v1.py       # Importable and executable reference implementation
-├── originals/
-│   └── oes32_residual_public_v1_original.py  # Supplied source preserved verbatim
+├── README.md
+├── LICENSE
+├── residual_definition.md
+├── failure_criterion.md
+├── src/
+│   └── residual_reference.py
 ├── tests/
-│   └── test_reference.py              # Reproducibility and contract tests
-├── .github/workflows/ci.yml           # Automated test workflow
-├── requirements.txt                   # Runtime dependency pin range
-└── LICENSE                            # MIT license
+│   └── test_contracts.py
+└── docs/
+    └── scope_and_limitations.md
 ```
 
-## Working on GitHub
+## Scope
 
-Use a branch and pull request for any substantive change so that the numerical diff and the rationale can be reviewed together. The following workflow uses GitHub CLI commands documented by GitHub: create a branch, test locally, push, and open a pull request. [1] [2]
-
-```bash
-# Create a focused change
- git switch -c change/describe-the-change
- python3 -m unittest discover -s tests -v
- git add .
- git commit -m "Describe the change"
- git push -u origin change/describe-the-change
-
-# Open review on GitHub
- gh pr create --fill
-```
-
-For proposed model changes, explain whether the public residual definition, default parameters, random-number sequence, or output schema has changed. Include test results in the pull request description. GitHub's CLI also supports creating and tracking issues for questions and requested analyses. [1]
+This repository supplies a transparent software artifact for a narrowly defined numerical comparison. It does not validate how a caller selects vectors or tolerances, establish the relevance of the calculation in any external setting, or justify decisions based on a pass/fail result. See [docs/scope_and_limitations.md](docs/scope_and_limitations.md) for the complete boundary statement.
 
 ## License
 
-This repository is released under the [MIT License](LICENSE). Confirm that this license matches the intended distribution terms before changing repository visibility or publishing a release.
-
-## References
-
-[1]: https://cli.github.com/manual/examples "GitHub CLI examples"
-[2]: https://cli.github.com/manual/gh_pr_create "GitHub CLI manual: gh pr create"
+The repository is distributed under the [MIT License](LICENSE).
