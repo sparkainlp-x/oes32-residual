@@ -89,7 +89,7 @@ This repository is the **normative residual definition** for Spark AI NLP under 
 
 ## Citation
 
-Citation metadata is in [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this repository" button). The first citable version is [`v0.1.0`](https://github.com/sparkainlp-x/oes32-residual/releases/tag/v0.1.0), tagged at commit `b77b61254f15778c6ae221843dceac7a8571158e`. Test vectors are SYNTHETIC; this repository makes no empirical or hardware claims.
+Citation metadata is in [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this repository" button). The first citable version is [`v0.1.0`](https://github.com/sparkainlp-x/oes32-residual/releases/tag/v0.1.0), tagged at `c094790` (main after the docs-only PR #1). The contract files in that tag are byte-identical to the normative commit `b77b61254f15778c6ae221843dceac7a8571158e`. Test vectors are SYNTHETIC; this repository makes no empirical or hardware claims.
 
 ## License
 
