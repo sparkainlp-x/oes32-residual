@@ -4,6 +4,14 @@ This repository is a small, deterministic **computational residual reference** f
 
 It is **not** an empirical study, a scientific theory, a physical model, a biological model, a diagnostic, or a claim about consciousness. The `OES-32` name is an identifier for this implementation only.
 
+## Org contract status (ADR-001)
+
+This repository is the **normative residual definition** for Spark AI NLP under ADR-001 Option A (Residual-canonical), decided 2026-09-20.
+
+- See [docs/ADR-001-oes32-tau-unification.md](docs/ADR-001-oes32-tau-unification.md).
+- Claim filter: [docs/CLAIM_HYGIENE.md](docs/CLAIM_HYGIENE.md).
+- Downstream engine/HLS work uses **Profile A sidecars**: they must import or match this contract for R, then apply separately versioned symmetry/fold thresholds. Weighted OES-512 latch scores remain TARGET until published.
+
 ## Contract
 
 The calculation is defined in [residual_definition.md](residual_definition.md). The pass/fail decision is defined separately in [failure_criterion.md](failure_criterion.md). Together, those files are the public contract for the code and tests.
@@ -45,6 +53,7 @@ The tests verify the component formula, maximum aggregation, strict failure ineq
 .
 ├── README.md
 ├── LICENSE
+├── CITATION.cff
 ├── residual_definition.md
 ├── failure_criterion.md
 ├── src/
@@ -52,12 +61,18 @@ The tests verify the component formula, maximum aggregation, strict failure ineq
 ├── tests/
 │   └── test_contracts.py
 └── docs/
-    └── scope_and_limitations.md
+    ├── scope_and_limitations.md
+    ├── ADR-001-oes32-tau-unification.md
+    └── CLAIM_HYGIENE.md
 ```
 
 ## Scope
 
 This repository supplies a transparent software artifact for a narrowly defined numerical comparison. It does not validate how a caller selects vectors or tolerances, establish the relevance of the calculation in any external setting, or justify decisions based on a pass/fail result. See [docs/scope_and_limitations.md](docs/scope_and_limitations.md) for the complete boundary statement.
+
+## Citation
+
+Citation metadata is in [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this repository" button). The first citable version is `v0.1.0`, tagged at commit `b77b61254f15778c6ae221843dceac7a8571158e`. Test vectors are SYNTHETIC; this repository makes no empirical or hardware claims.
 
 ## License
 
