@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this reference, please cite it as below."
+title: "OES-32 Residual Reference"
+type: software
+authors:
+  - family-names: "Brisson"
+    given-names: "Jean-François"
+    affiliation: "Spark AI NLP"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"  # PLACEHOLDER: add the founder's real ORCID iD, then uncomment
+repository-code: "https://github.com/sparkainlp-x/oes32-residual"
+url: "https://sparkainlpx.xyz"
+license: MIT
+version: "0.1.0"
+commit: "b77b61254f15778c6ae221843dceac7a8571158e"
+date-released: "2026-09-26"  # set to the actual date the v0.1.0 tag is pushed
+abstract: >-
+  Deterministic reference for the maximum absolute component residual between
+  two 32-component real vectors, with a strict-inequality failure criterion
+  (ADR-001 normative definition). Research software; SYNTHETIC test vectors
+  only; no empirical, hardware, or medical claims.
+keywords:
+  - oes32
+  - residual
+  - reference-implementation
+  - deterministic
+  - research-software
