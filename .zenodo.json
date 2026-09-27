@@ -48,5 +48,10 @@
       "resource_type": "software"
     }
   ],
-  "language": "eng"
+  "language": "eng",
+  "communities": [
+    {
+      "identifier": "spark-ai-nlp"
+    }
+  ]
 }
