@@ -26,7 +26,7 @@
 | Residual contract public | 1 |
 | τ unification path chosen | 1 (Option A) |
 | Profile A sidecars chosen | 1 |
-| Engine/HLS aligned to A | 0 (PRs in flight) |
+| Engine/HLS aligned to A | 1 (both READMEs cite oes32-residual and are labelled Profile A sidecars; see "Definitional differences" below) |
 | Weighted S@0.50 public | 0 |
 | QPU / medical / flight claims | 0 (latched closed) |
 

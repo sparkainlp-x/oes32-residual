@@ -7,6 +7,8 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Changed
+- `.zenodo.json` adds the `spark-ai-nlp` Zenodo community, so future releases are archived there.
+- ADR-001: the "Engine/HLS aligned to A" bit is set to 1 (both sidecar READMEs now cite oes32-residual); removed the stale "PRs in flight" note.
 - CI actions bumped to `actions/checkout@v7` and `actions/setup-python@v7` (Node 24).
 
 ## [0.1.1] - 2026-09-26
