@@ -10,9 +10,9 @@ authors:
 repository-code: "https://github.com/sparkainlp-x/oes32-residual"
 url: "https://sparkainlpx.xyz"
 license: MIT
-version: "0.1.0"
+version: "0.1.1"
 commit: "b77b61254f15778c6ae221843dceac7a8571158e"
-date-released: "2026-09-26"  # set to the actual date the v0.1.0 tag is pushed
+date-released: "2026-09-26"  # set to the actual date the v0.1.1 tag is pushed
 abstract: >-
   Deterministic reference for the maximum absolute component residual between
   two 32-component real vectors, with a strict-inequality failure criterion
