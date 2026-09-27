@@ -7,6 +7,7 @@ Normative OES-32 residual reference (ADR-001): a deterministic Python definition
 [![Status: research prototype](https://img.shields.io/badge/status-research%20prototype-orange.svg)](#what-it-is-not)
 [![ADR-001: normative](https://img.shields.io/badge/ADR--001-normative-blue.svg)](#relationship-to-adr-001)
 [![Release](https://img.shields.io/github/v/release/sparkainlp-x/oes32-residual)](https://github.com/sparkainlp-x/oes32-residual/releases)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22985520.svg)](https://doi.org/10.5281/zenodo.22985520)
 
 ## What it is
 
@@ -88,6 +89,8 @@ This repository is the **normative residual definition** for Spark AI NLP under 
 ```
 
 ## Citation
+
+Archived on Zenodo: concept DOI [10.5281/zenodo.22985520](https://doi.org/10.5281/zenodo.22985520) (all versions; resolves to the latest). The v0.1.1 archive is [10.5281/zenodo.22985521](https://doi.org/10.5281/zenodo.22985521).
 
 Citation metadata is in [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this repository" button). The first citable version is [`v0.1.0`](https://github.com/sparkainlp-x/oes32-residual/releases/tag/v0.1.0), tagged at `c094790` (main after the docs-only PR #1). The contract files in that tag are byte-identical to the normative commit `b77b61254f15778c6ae221843dceac7a8571158e`. Test vectors are SYNTHETIC; this repository makes no empirical or hardware claims.
 
