@@ -1,0 +1,52 @@
+{
+  "upload_type": "software",
+  "title": "OES-32 Residual Reference",
+  "description": "<p>Normative OES-32 residual reference (ADR-001): a deterministic Python definition of the max-absolute residual between two 32-component vectors, with a strict <code>&gt;</code> tolerance failure rule and executable contract tests.</p><p><strong>Contract.</strong> Input: two finite real-valued vectors of length 32 and a finite, non-negative tolerance. Component residual: <code>abs(observed[i] - reference[i])</code>. Aggregate residual: the maximum of the 32 component residuals. Failure occurs if and only if aggregate residual <code>&gt; tolerance</code>. Invalid input is rejected with <code>ValueError</code>.</p><p>This repository is the normative residual definition for Spark AI NLP under ADR-001 Option A (Residual-canonical); normative commit <code>b77b61254f15778c6ae221843dceac7a8571158e</code>. Downstream oes32_engine (Python) and oes32-hls (C++ HLS) are Profile A sidecars. The OES-512 weighted latch remains <strong>TARGET</strong>.</p><p><strong>Evidence tags.</strong> Contract-test vectors: <strong>SYNTHETIC</strong> (hand-written). Empirical, hardware, or field results: none claimed.</p><p><strong>Scope and limits.</strong> Research prototype. It is not an empirical study, a scientific theory, a physical or biological model, a diagnostic, or a claim about consciousness; it is not hardware, medical, or quantum-hardware software, and it does not justify decisions based on a pass/fail result.</p><p>Evidence tags follow <a href=\"https://github.com/sparkainlp-x/.github#evidence-tags\">sparkainlp-x/.github</a> (SYNTHETIC / REPORTED / TARGET / UNRUN).</p>",
+  "creators": [
+    {
+      "name": "Brisson, Jean-François",
+      "affiliation": "Spark AI NLP"
+    }
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": [
+    "OES-32",
+    "residual",
+    "max-absolute residual",
+    "reference implementation",
+    "contract tests",
+    "failure criterion",
+    "deterministic",
+    "Python",
+    "research software"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/sparkainlp-x/oes32-residual",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985523",
+      "relation": "isSourceOf",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985525",
+      "relation": "isReferencedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985530",
+      "relation": "isReferencedBy",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.22985532",
+      "relation": "isReferencedBy",
+      "resource_type": "software"
+    }
+  ],
+  "language": "eng"
+}
