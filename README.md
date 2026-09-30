@@ -2,7 +2,7 @@
 
 Normative OES-32 residual reference (ADR-001): a deterministic Python definition of the max-absolute residual between two 32-component vectors, with a strict `>` tolerance failure rule and executable contract tests.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Validate residual reference](https://github.com/sparkainlp-x/oes32-residual/actions/workflows/ci.yml/badge.svg)](https://github.com/sparkainlp-x/oes32-residual/actions/workflows/ci.yml)
 [![Status: research prototype](https://img.shields.io/badge/status-research%20prototype-orange.svg)](#what-it-is-not)
 [![ADR-001: normative](https://img.shields.io/badge/ADR--001-normative-blue.svg)](#relationship-to-adr-001)
@@ -96,4 +96,8 @@ Citation metadata is in [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this 
 
 ## License
 
-The repository is distributed under the [MIT License](LICENSE).
+This software is available under the GNU Affero General Public License v3.0 only (AGPL-3.0-only); see [LICENSE](LICENSE).
+
+Organizations that want to use it in proprietary products or services without AGPL obligations can contact the author about a commercial license via https://sparkainlpx.xyz.
+
+Versions published before 2026-09-29 were released under the MIT License and remain available under those terms.

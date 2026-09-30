@@ -9,7 +9,7 @@ authors:
     # orcid: "https://orcid.org/0000-0000-0000-0000"  # PLACEHOLDER: add the founder's real ORCID iD, then uncomment
 repository-code: "https://github.com/sparkainlp-x/oes32-residual"
 url: "https://sparkainlpx.xyz"
-license: MIT
+license: AGPL-3.0-only
 doi: "10.5281/zenodo.22985520"
 identifiers:
   - type: doi
