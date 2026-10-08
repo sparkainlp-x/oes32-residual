@@ -90,7 +90,7 @@ This repository is the **normative residual definition** for Spark AI NLP under 
 
 ## Citation
 
-Archived on Zenodo: concept DOI [10.5281/zenodo.22985520](https://doi.org/10.5281/zenodo.22985520) (all versions; resolves to the latest). The v0.1.1 archive is [10.5281/zenodo.22985521](https://doi.org/10.5281/zenodo.22985521).
+Archived on Zenodo: concept DOI [10.5281/zenodo.22985520](https://doi.org/10.5281/zenodo.22985520) (all versions; resolves to the latest). The v0.1.2 archive is [10.5281/zenodo.23241625](https://doi.org/10.5281/zenodo.23241625); v0.1.1 is [10.5281/zenodo.22985521](https://doi.org/10.5281/zenodo.22985521).
 
 Citation metadata is in [CITATION.cff](CITATION.cff) (GitHub shows a "Cite this repository" button). The first citable version is [`v0.1.0`](https://github.com/sparkainlp-x/oes32-residual/releases/tag/v0.1.0), tagged at `c094790` (main after the docs-only PR #1). The contract files in that tag are byte-identical to the normative commit `b77b61254f15778c6ae221843dceac7a8571158e`. Test vectors are SYNTHETIC; this repository makes no empirical or hardware claims.
 
