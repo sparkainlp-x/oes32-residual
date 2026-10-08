@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this reference, please cite it as below."
-title: "OES-32 Residual Reference"
+title: "OES-32 Residual Reference: normative max-absolute residual definition with contract tests"
 type: software
 authors:
   - family-names: "Brisson"
@@ -10,7 +10,7 @@ authors:
 repository-code: "https://github.com/sparkainlp-x/oes32-residual"
 url: "https://sparkainlpx.xyz"
 license: AGPL-3.0-only
-doi: "10.5281/zenodo.22985520"
+doi: 10.5281/zenodo.22985520
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22985520"
@@ -18,9 +18,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.22985521"
     description: "Version DOI for v0.1.1 (Zenodo)"
-version: "0.1.1"
+version: "0.1.2"
 commit: "b77b61254f15778c6ae221843dceac7a8571158e"
-date-released: "2026-09-26"  # set to the actual date the v0.1.1 tag is pushed
+date-released: "2026-10-08"
 abstract: >-
   Deterministic reference for the maximum absolute component residual between
   two 32-component real vectors, with a strict-inequality failure criterion
